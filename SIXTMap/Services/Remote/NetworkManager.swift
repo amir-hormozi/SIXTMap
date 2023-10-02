@@ -9,7 +9,7 @@ import Foundation
 
 struct NetworkManager {
     private func buildURLRequest(apiConfig: APIConfigProtocol) throws -> URLRequest {
-        guard let baseURL = Bundle.main.object(forInfoDictionaryKey: "BASE_URL") as? String else { throw NetworkError.invalidURL }
+        guard let baseURL = Bundle.main.object(forInfoDictionaryKey: "BaseUrl") as? String else { throw NetworkError.invalidURL }
         guard let url = URL(string: baseURL + apiConfig.url) else { throw NetworkError.invalidURL }
         
         var request = URLRequest(url: url)

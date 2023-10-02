@@ -27,6 +27,10 @@
 		2978CB9F2ACAA5B100EEDD73 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB9B2ACAA5B100EEDD73 /* NetworkManager.swift */; };
 		2978CBA12ACAA5D500EEDD73 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBA02ACAA5D400EEDD73 /* APIConfig.swift */; };
 		2978CBA32ACAA6C700EEDD73 /* AppConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */; };
+		2978CBA62ACAB26A00EEDD73 /* MapAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBA52ACAB26A00EEDD73 /* MapAPIConfig.swift */; };
+		2978CBAC2ACABF2E00EEDD73 /* MapExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBAB2ACABF2E00EEDD73 /* MapExtension.swift */; };
+		2978CBAF2ACAD37400EEDD73 /* CarsListDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */; };
+		2978CBB12ACAD44D00EEDD73 /* MapWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		2978CB9B2ACAA5B100EEDD73 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2978CBA02ACAA5D400EEDD73 /* APIConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppConfig.xcconfig; sourceTree = "<group>"; };
+		2978CBA52ACAB26A00EEDD73 /* MapAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAPIConfig.swift; sourceTree = "<group>"; };
+		2978CBAB2ACABF2E00EEDD73 /* MapExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExtension.swift; sourceTree = "<group>"; };
+		2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListDecodableModel.swift; sourceTree = "<group>"; };
+		2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,7 @@
 				2978CB812ACA906700EEDD73 /* Application */,
 				2978CB852ACA939B00EEDD73 /* Modules */,
 				2978CB962ACAA57500EEDD73 /* Services */,
+				2978CBAA2ACABF1300EEDD73 /* Extension */,
 				2978CB822ACA907F00EEDD73 /* Resource */,
 				2978CB522ACA8C4E00EEDD73 /* ViewController.swift */,
 			);
@@ -219,6 +228,7 @@
 		2978CB952ACA94E600EEDD73 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				2978CBA42ACAB24A00EEDD73 /* Worker */,
 				2978CB942ACA94D500EEDD73 /* Model */,
 				2978CB932ACA94CF00EEDD73 /* Router */,
 				2978CB922ACA94C800EEDD73 /* Presenter */,
@@ -239,6 +249,7 @@
 		2978CB972ACAA58500EEDD73 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				2978CBAD2ACAD35600EEDD73 /* DecodableModel */,
 				2978CB9B2ACAA5B100EEDD73 /* NetworkManager.swift */,
 				2978CB992ACAA5B100EEDD73 /* NetworkResponse.swift */,
 				2978CB982ACAA5B100EEDD73 /* NetworkError.swift */,
@@ -246,6 +257,31 @@
 				2978CBA02ACAA5D400EEDD73 /* APIConfig.swift */,
 			);
 			path = Remote;
+			sourceTree = "<group>";
+		};
+		2978CBA42ACAB24A00EEDD73 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				2978CBA52ACAB26A00EEDD73 /* MapAPIConfig.swift */,
+				2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		2978CBAA2ACABF1300EEDD73 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2978CBAB2ACABF2E00EEDD73 /* MapExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2978CBAD2ACAD35600EEDD73 /* DecodableModel */ = {
+			isa = PBXGroup;
+			children = (
+				2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */,
+			);
+			path = DecodableModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,11 +417,15 @@
 			files = (
 				2978CB8F2ACA93BF00EEDD73 /* MapInteractor.swift in Sources */,
 				2978CB532ACA8C4E00EEDD73 /* ViewController.swift in Sources */,
+				2978CBB12ACAD44D00EEDD73 /* MapWorker.swift in Sources */,
 				2978CB8C2ACA93BF00EEDD73 /* MapViewController.swift in Sources */,
 				2978CB9F2ACAA5B100EEDD73 /* NetworkManager.swift in Sources */,
+				2978CBA62ACAB26A00EEDD73 /* MapAPIConfig.swift in Sources */,
+				2978CBAF2ACAD37400EEDD73 /* CarsListDecodableModel.swift in Sources */,
 				2978CB4F2ACA8C4E00EEDD73 /* AppDelegate.swift in Sources */,
 				2978CB9E2ACAA5B100EEDD73 /* RequestMethod.swift in Sources */,
 				2978CBA12ACAA5D500EEDD73 /* APIConfig.swift in Sources */,
+				2978CBAC2ACABF2E00EEDD73 /* MapExtension.swift in Sources */,
 				2978CB8B2ACA93BF00EEDD73 /* MapPresenter.swift in Sources */,
 				2978CB8E2ACA93BF00EEDD73 /* MapModel.swift in Sources */,
 				2978CB8D2ACA93BF00EEDD73 /* MapRouter.swift in Sources */,

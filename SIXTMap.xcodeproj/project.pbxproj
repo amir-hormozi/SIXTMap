@@ -16,6 +16,11 @@
 		2978CB692ACA8C5000EEDD73 /* SIXTMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB682ACA8C5000EEDD73 /* SIXTMapTests.swift */; };
 		2978CB732ACA8C5000EEDD73 /* SIXTMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB722ACA8C5000EEDD73 /* SIXTMapUITests.swift */; };
 		2978CB752ACA8C5000EEDD73 /* SIXTMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB742ACA8C5000EEDD73 /* SIXTMapUITestsLaunchTests.swift */; };
+		2978CB8B2ACA93BF00EEDD73 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB862ACA93BF00EEDD73 /* MapPresenter.swift */; };
+		2978CB8C2ACA93BF00EEDD73 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB872ACA93BF00EEDD73 /* MapViewController.swift */; };
+		2978CB8D2ACA93BF00EEDD73 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB882ACA93BF00EEDD73 /* MapRouter.swift */; };
+		2978CB8E2ACA93BF00EEDD73 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB892ACA93BF00EEDD73 /* MapModel.swift */; };
+		2978CB8F2ACA93BF00EEDD73 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB8A2ACA93BF00EEDD73 /* MapInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		2978CB6E2ACA8C5000EEDD73 /* SIXTMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIXTMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2978CB722ACA8C5000EEDD73 /* SIXTMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIXTMapUITests.swift; sourceTree = "<group>"; };
 		2978CB742ACA8C5000EEDD73 /* SIXTMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIXTMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2978CB862ACA93BF00EEDD73 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		2978CB872ACA93BF00EEDD73 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2978CB882ACA93BF00EEDD73 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		2978CB892ACA93BF00EEDD73 /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		2978CB8A2ACA93BF00EEDD73 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2978CB812ACA906700EEDD73 /* Application */,
+				2978CB852ACA939B00EEDD73 /* Modules */,
 				2978CB822ACA907F00EEDD73 /* Resource */,
 				2978CB522ACA8C4E00EEDD73 /* ViewController.swift */,
 			);
@@ -135,7 +146,6 @@
 		2978CB822ACA907F00EEDD73 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				2978CB832ACA90CB00EEDD73 /* Modules */,
 				2978CB5A2ACA8C4F00EEDD73 /* Assets.xcassets */,
 				2978CB5C2ACA8C4F00EEDD73 /* LaunchScreen.storyboard */,
 				2978CB5F2ACA8C4F00EEDD73 /* Info.plist */,
@@ -144,11 +154,64 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		2978CB832ACA90CB00EEDD73 /* Modules */ = {
+		2978CB852ACA939B00EEDD73 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2978CB952ACA94E600EEDD73 /* Map */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		2978CB902ACA947C00EEDD73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2978CB872ACA93BF00EEDD73 /* MapViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2978CB912ACA94C000EEDD73 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2978CB8A2ACA93BF00EEDD73 /* MapInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2978CB922ACA94C800EEDD73 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2978CB862ACA93BF00EEDD73 /* MapPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2978CB932ACA94CF00EEDD73 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2978CB882ACA93BF00EEDD73 /* MapRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2978CB942ACA94D500EEDD73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2978CB892ACA93BF00EEDD73 /* MapModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2978CB952ACA94E600EEDD73 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				2978CB942ACA94D500EEDD73 /* Model */,
+				2978CB932ACA94CF00EEDD73 /* Router */,
+				2978CB922ACA94C800EEDD73 /* Presenter */,
+				2978CB912ACA94C000EEDD73 /* Interactor */,
+				2978CB902ACA947C00EEDD73 /* View */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,8 +344,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2978CB8F2ACA93BF00EEDD73 /* MapInteractor.swift in Sources */,
 				2978CB532ACA8C4E00EEDD73 /* ViewController.swift in Sources */,
+				2978CB8C2ACA93BF00EEDD73 /* MapViewController.swift in Sources */,
 				2978CB4F2ACA8C4E00EEDD73 /* AppDelegate.swift in Sources */,
+				2978CB8B2ACA93BF00EEDD73 /* MapPresenter.swift in Sources */,
+				2978CB8E2ACA93BF00EEDD73 /* MapModel.swift in Sources */,
+				2978CB8D2ACA93BF00EEDD73 /* MapRouter.swift in Sources */,
 				2978CB592ACA8C4E00EEDD73 /* SIXTMap.xcdatamodeld in Sources */,
 				2978CB512ACA8C4E00EEDD73 /* SceneDelegate.swift in Sources */,
 			);

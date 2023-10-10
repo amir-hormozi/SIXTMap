@@ -1,0 +1,10 @@
+//
+//  AppConfig.xcconfig
+//  SIXTMap
+//
+//  Created by Amir on 10/2/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+BaseUrl = cdn.sixt.io

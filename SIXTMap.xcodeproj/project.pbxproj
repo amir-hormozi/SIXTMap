@@ -21,6 +21,16 @@
 		2978CB8D2ACA93BF00EEDD73 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB882ACA93BF00EEDD73 /* MapRouter.swift */; };
 		2978CB8E2ACA93BF00EEDD73 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB892ACA93BF00EEDD73 /* MapModel.swift */; };
 		2978CB8F2ACA93BF00EEDD73 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB8A2ACA93BF00EEDD73 /* MapInteractor.swift */; };
+		2978CB9C2ACAA5B100EEDD73 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB982ACAA5B100EEDD73 /* NetworkError.swift */; };
+		2978CB9D2ACAA5B100EEDD73 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB992ACAA5B100EEDD73 /* NetworkResponse.swift */; };
+		2978CB9E2ACAA5B100EEDD73 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB9A2ACAA5B100EEDD73 /* RequestMethod.swift */; };
+		2978CB9F2ACAA5B100EEDD73 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB9B2ACAA5B100EEDD73 /* NetworkManager.swift */; };
+		2978CBA12ACAA5D500EEDD73 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBA02ACAA5D400EEDD73 /* APIConfig.swift */; };
+		2978CBA32ACAA6C700EEDD73 /* AppConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */; };
+		2978CBA62ACAB26A00EEDD73 /* MapAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBA52ACAB26A00EEDD73 /* MapAPIConfig.swift */; };
+		2978CBAC2ACABF2E00EEDD73 /* MapExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBAB2ACABF2E00EEDD73 /* MapExtension.swift */; };
+		2978CBAF2ACAD37400EEDD73 /* CarsListDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */; };
+		2978CBB12ACAD44D00EEDD73 /* MapWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +69,16 @@
 		2978CB882ACA93BF00EEDD73 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		2978CB892ACA93BF00EEDD73 /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		2978CB8A2ACA93BF00EEDD73 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		2978CB982ACAA5B100EEDD73 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		2978CB992ACAA5B100EEDD73 /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		2978CB9A2ACAA5B100EEDD73 /* RequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		2978CB9B2ACAA5B100EEDD73 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2978CBA02ACAA5D400EEDD73 /* APIConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppConfig.xcconfig; sourceTree = "<group>"; };
+		2978CBA52ACAB26A00EEDD73 /* MapAPIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAPIConfig.swift; sourceTree = "<group>"; };
+		2978CBAB2ACABF2E00EEDD73 /* MapExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExtension.swift; sourceTree = "<group>"; };
+		2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListDecodableModel.swift; sourceTree = "<group>"; };
+		2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +131,8 @@
 			children = (
 				2978CB812ACA906700EEDD73 /* Application */,
 				2978CB852ACA939B00EEDD73 /* Modules */,
+				2978CB962ACAA57500EEDD73 /* Services */,
+				2978CBAA2ACABF1300EEDD73 /* Extension */,
 				2978CB822ACA907F00EEDD73 /* Resource */,
 				2978CB522ACA8C4E00EEDD73 /* ViewController.swift */,
 			);
@@ -150,6 +172,7 @@
 				2978CB5C2ACA8C4F00EEDD73 /* LaunchScreen.storyboard */,
 				2978CB5F2ACA8C4F00EEDD73 /* Info.plist */,
 				2978CB572ACA8C4E00EEDD73 /* SIXTMap.xcdatamodeld */,
+				2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -205,6 +228,7 @@
 		2978CB952ACA94E600EEDD73 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				2978CBA42ACAB24A00EEDD73 /* Worker */,
 				2978CB942ACA94D500EEDD73 /* Model */,
 				2978CB932ACA94CF00EEDD73 /* Router */,
 				2978CB922ACA94C800EEDD73 /* Presenter */,
@@ -212,6 +236,52 @@
 				2978CB902ACA947C00EEDD73 /* View */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		2978CB962ACAA57500EEDD73 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2978CB972ACAA58500EEDD73 /* Remote */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2978CB972ACAA58500EEDD73 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				2978CBAD2ACAD35600EEDD73 /* DecodableModel */,
+				2978CB9B2ACAA5B100EEDD73 /* NetworkManager.swift */,
+				2978CB992ACAA5B100EEDD73 /* NetworkResponse.swift */,
+				2978CB982ACAA5B100EEDD73 /* NetworkError.swift */,
+				2978CB9A2ACAA5B100EEDD73 /* RequestMethod.swift */,
+				2978CBA02ACAA5D400EEDD73 /* APIConfig.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		2978CBA42ACAB24A00EEDD73 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				2978CBA52ACAB26A00EEDD73 /* MapAPIConfig.swift */,
+				2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		2978CBAA2ACABF1300EEDD73 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2978CBAB2ACABF2E00EEDD73 /* MapExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2978CBAD2ACAD35600EEDD73 /* DecodableModel */ = {
+			isa = PBXGroup;
+			children = (
+				2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */,
+			);
+			path = DecodableModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2978CB5E2ACA8C4F00EEDD73 /* LaunchScreen.storyboard in Resources */,
+				2978CBA32ACAA6C700EEDD73 /* AppConfig.xcconfig in Resources */,
 				2978CB5B2ACA8C4F00EEDD73 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,13 +417,22 @@
 			files = (
 				2978CB8F2ACA93BF00EEDD73 /* MapInteractor.swift in Sources */,
 				2978CB532ACA8C4E00EEDD73 /* ViewController.swift in Sources */,
+				2978CBB12ACAD44D00EEDD73 /* MapWorker.swift in Sources */,
 				2978CB8C2ACA93BF00EEDD73 /* MapViewController.swift in Sources */,
+				2978CB9F2ACAA5B100EEDD73 /* NetworkManager.swift in Sources */,
+				2978CBA62ACAB26A00EEDD73 /* MapAPIConfig.swift in Sources */,
+				2978CBAF2ACAD37400EEDD73 /* CarsListDecodableModel.swift in Sources */,
 				2978CB4F2ACA8C4E00EEDD73 /* AppDelegate.swift in Sources */,
+				2978CB9E2ACAA5B100EEDD73 /* RequestMethod.swift in Sources */,
+				2978CBA12ACAA5D500EEDD73 /* APIConfig.swift in Sources */,
+				2978CBAC2ACABF2E00EEDD73 /* MapExtension.swift in Sources */,
 				2978CB8B2ACA93BF00EEDD73 /* MapPresenter.swift in Sources */,
 				2978CB8E2ACA93BF00EEDD73 /* MapModel.swift in Sources */,
 				2978CB8D2ACA93BF00EEDD73 /* MapRouter.swift in Sources */,
 				2978CB592ACA8C4E00EEDD73 /* SIXTMap.xcdatamodeld in Sources */,
+				2978CB9D2ACAA5B100EEDD73 /* NetworkResponse.swift in Sources */,
 				2978CB512ACA8C4E00EEDD73 /* SceneDelegate.swift in Sources */,
+				2978CB9C2ACAA5B100EEDD73 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +482,7 @@
 /* Begin XCBuildConfiguration section */
 		2978CB762ACA8C5000EEDD73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -452,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -465,6 +546,7 @@
 		};
 		2978CB772ACA8C5000EEDD73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -509,7 +591,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -521,6 +603,7 @@
 		};
 		2978CB792ACA8C5000EEDD73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -550,6 +633,7 @@
 		};
 		2978CB7A2ACA8C5000EEDD73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -579,6 +663,7 @@
 		};
 		2978CB7C2ACA8C5000EEDD73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,6 +684,7 @@
 		};
 		2978CB7D2ACA8C5000EEDD73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -619,6 +705,7 @@
 		};
 		2978CB7F2ACA8C5000EEDD73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -637,6 +724,7 @@
 		};
 		2978CB802ACA8C5000EEDD73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2978CBA22ACAA6C700EEDD73 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -663,7 +751,7 @@
 				2978CB772ACA8C5000EEDD73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2978CB782ACA8C5000EEDD73 /* Build configuration list for PBXNativeTarget "SIXTMap" */ = {
 			isa = XCConfigurationList;
@@ -672,7 +760,7 @@
 				2978CB7A2ACA8C5000EEDD73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2978CB7B2ACA8C5000EEDD73 /* Build configuration list for PBXNativeTarget "SIXTMapTests" */ = {
 			isa = XCConfigurationList;
@@ -681,7 +769,7 @@
 				2978CB7D2ACA8C5000EEDD73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2978CB7E2ACA8C5000EEDD73 /* Build configuration list for PBXNativeTarget "SIXTMapUITests" */ = {
 			isa = XCConfigurationList;
@@ -690,7 +778,7 @@
 				2978CB802ACA8C5000EEDD73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

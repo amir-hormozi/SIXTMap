@@ -5,10 +5,31 @@
 //  Created by Amir on 10/2/23.
 //
 
-protocol MapPresentationLogic { }
+import CoreLocation
 
-class MapPresenter: MapPresentationLogic {
+protocol MapPresentationLogic {
+    func presentCarsList(crasList: [MapModel.CarListPresentationModel]) async
+    func setMapScale(locationDetail: MapModel.CarListPresentationModel?) async
+
+}
+
+class MapPresenter {
     
     // MARK: Variable
     weak var viewController: MapDisplayLogic?
+}
+
+//MARK: PresentationLogic Extension
+extension MapPresenter: MapPresentationLogic {
+    func setMapScale(locationDetail: MapModel.CarListPresentationModel?) async {
+        let distanceValue = 8000
+        guard let locationDetail = locationDetail else { return }
+        guard let distanceMeter = CLLocationDistance(exactly: distanceValue) else { return }
+
+        await viewController?.setMapScale(location: locationDetail, distanceMeter: distanceMeter)
+    }
+    
+    func presentCarsList(crasList: [MapModel.CarListPresentationModel]) async {
+        await viewController?.addPins(pins: crasList)
+    }
 }

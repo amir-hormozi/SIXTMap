@@ -180,7 +180,6 @@
 		2978CB852ACA939B00EEDD73 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				29F3C5092ACD48D1005B7D13 /* CarsLocation */,
 				2978CB952ACA94E600EEDD73 /* Map */,
 			);
 			path = Modules;
@@ -283,29 +282,6 @@
 				2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */,
 			);
 			path = DecodableModel;
-			sourceTree = "<group>";
-		};
-		29F3C5092ACD48D1005B7D13 /* CarsLocation */ = {
-			isa = PBXGroup;
-			children = (
-				29F3C50C2ACD4939005B7D13 /* Detail */,
-				29F3C50A2ACD492D005B7D13 /* List */,
-			);
-			path = CarsLocation;
-			sourceTree = "<group>";
-		};
-		29F3C50A2ACD492D005B7D13 /* List */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		29F3C50C2ACD4939005B7D13 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

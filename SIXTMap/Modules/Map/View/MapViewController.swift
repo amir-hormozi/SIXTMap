@@ -9,7 +9,8 @@ import UIKit
 import MapKit
 
 protocol MapDisplayLogic: AnyObject { 
-    func addPins(pins: [MapModel.CarListPresentationModel])
+    @MainActor func setMapScale(location: MapModel.CarListPresentationModel, distanceMeter: CLLocationDistance)
+    @MainActor func addPins(pins: [MapModel.CarListPresentationModel])
 }
 
 class MapViewController: UIViewController {
@@ -75,14 +76,30 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MapDisplayLogic {
+    func setMapScale(location: MapModel.CarListPresentationModel, distanceMeter: CLLocationDistance) {
+        let region = MKCoordinateRegion( center: .init(latitude: location.lat, longitude: location.long), latitudinalMeters: distanceMeter, longitudinalMeters: distanceMeter)
+        mapView.setRegion(mapView.regionThatFits(region), animated: true)
+    }
+
     func addPins(pins: [MapModel.CarListPresentationModel]) {
-        DispatchQueue.main.async {
-            self.mapView.addAnnotations(pins: pins)
-        }
+        self.mapView.addAnnotations(pins: pins)
     }
 }
 
 extension MapViewController: MKMapViewDelegate {
+    private func setupRenderer(overlay: MKOverlay) -> MKGradientPolylineRenderer {
+        let renderer = MKGradientPolylineRenderer(overlay: overlay)
+        
+        renderer.setColors([
+            UIColor(red: 0.02, green: 0.91, blue: 0.05, alpha: 1.0),
+            UIColor(red: 1.0, green: 0.48, blue: 0.0, alpha: 1.0),
+            UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0),
+        ], locations: [])
+        renderer.lineCap = .round
+        renderer.lineWidth = 3.0
+        return renderer
+    }
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
             return nil
@@ -104,18 +121,8 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        let renderer = MKGradientPolylineRenderer(overlay: overlay)
-        
-        renderer.setColors([
-            UIColor(red: 0.02, green: 0.91, blue: 0.05, alpha: 1.0),
-            UIColor(red: 1.0, green: 0.48, blue: 0.0, alpha: 1.0),
-            UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0),
-        ], locations: [])
-        renderer.lineCap = .round
-        renderer.lineWidth = 3.0
-        
+        let renderer = setupRenderer(overlay: overlay)
         return renderer
     }
-
 }
 

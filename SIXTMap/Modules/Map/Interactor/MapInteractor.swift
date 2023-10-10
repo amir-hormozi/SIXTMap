@@ -31,10 +31,10 @@ extension MapInteractor: MapBusinessLogic {
     func fetchCarsList() {
         Task {
             do {
-              let carsListDecodableModel = try await worker.fetchCarsList()
+                let carsListDecodableModel = try await worker.fetchCarsList()
                 let presentationModel = castDTOModelToPresentationModel(dtoModel: carsListDecodableModel)
-                presenter?.presentCarsList(crasList: presentationModel)
-                
+                await presenter?.setMapScale(locationDetail: presentationModel.first)
+                await presenter?.presentCarsList(crasList: presentationModel)
             } catch (let error) {
                 print(error)
             }

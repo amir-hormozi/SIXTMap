@@ -20,6 +20,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         window?.rootViewController = MapViewController()
         window?.makeKeyAndVisible()
+        
+        let appName = "Camera"
+        let appScheme = "\(appName)://"
+        let appUrl = URL(string: appScheme)
+
+        if UIApplication.shared.canOpenURL(appUrl! as URL)
+        {
+            UIApplication.shared.open(appUrl!)
+
+        } else {
+            print("App not installed")
+        }
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

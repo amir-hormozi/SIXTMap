@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		295B2C5A2AD52FAE0000BFF3 /* CarsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295B2C542AD52FAE0000BFF3 /* CarsListPresenter.swift */; };
+		295B2C5B2AD52FAE0000BFF3 /* CarsListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295B2C552AD52FAE0000BFF3 /* CarsListWorker.swift */; };
+		295B2C5C2AD52FAE0000BFF3 /* CarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295B2C562AD52FAE0000BFF3 /* CarsListViewController.swift */; };
+		295B2C5D2AD52FAE0000BFF3 /* CarsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295B2C572AD52FAE0000BFF3 /* CarsListRouter.swift */; };
+		295B2C5E2AD52FAE0000BFF3 /* CarsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295B2C582AD52FAE0000BFF3 /* CarsListInteractor.swift */; };
+		295B2C5F2AD52FAE0000BFF3 /* CarsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295B2C592AD52FAE0000BFF3 /* CarsListModel.swift */; };
 		2978CB4F2ACA8C4E00EEDD73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB4E2ACA8C4E00EEDD73 /* AppDelegate.swift */; };
 		2978CB512ACA8C4E00EEDD73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB502ACA8C4E00EEDD73 /* SceneDelegate.swift */; };
 		2978CB532ACA8C4E00EEDD73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CB522ACA8C4E00EEDD73 /* ViewController.swift */; };
@@ -31,6 +37,7 @@
 		2978CBAC2ACABF2E00EEDD73 /* MapExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBAB2ACABF2E00EEDD73 /* MapExtension.swift */; };
 		2978CBAF2ACAD37400EEDD73 /* CarsListDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */; };
 		2978CBB12ACAD44D00EEDD73 /* MapWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */; };
+		299AA8C02AD680AB008E5D3B /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299AA8BF2AD680AB008E5D3B /* CarCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		295B2C542AD52FAE0000BFF3 /* CarsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListPresenter.swift; sourceTree = "<group>"; };
+		295B2C552AD52FAE0000BFF3 /* CarsListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListWorker.swift; sourceTree = "<group>"; };
+		295B2C562AD52FAE0000BFF3 /* CarsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewController.swift; sourceTree = "<group>"; };
+		295B2C572AD52FAE0000BFF3 /* CarsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListRouter.swift; sourceTree = "<group>"; };
+		295B2C582AD52FAE0000BFF3 /* CarsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListInteractor.swift; sourceTree = "<group>"; };
+		295B2C592AD52FAE0000BFF3 /* CarsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListModel.swift; sourceTree = "<group>"; };
 		2978CB4B2ACA8C4E00EEDD73 /* SIXTMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIXTMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2978CB4E2ACA8C4E00EEDD73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2978CB502ACA8C4E00EEDD73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +92,7 @@
 		2978CBAB2ACABF2E00EEDD73 /* MapExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExtension.swift; sourceTree = "<group>"; };
 		2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListDecodableModel.swift; sourceTree = "<group>"; };
 		2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWorker.swift; sourceTree = "<group>"; };
+		299AA8BF2AD680AB008E5D3B /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +120,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		295B2C522AD52F800000BFF3 /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				295B2C532AD52F970000BFF3 /* List */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		295B2C532AD52F970000BFF3 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				299AA8BE2AD67FE2008E5D3B /* Cell */,
+				295B2C542AD52FAE0000BFF3 /* CarsListPresenter.swift */,
+				295B2C552AD52FAE0000BFF3 /* CarsListWorker.swift */,
+				295B2C562AD52FAE0000BFF3 /* CarsListViewController.swift */,
+				295B2C572AD52FAE0000BFF3 /* CarsListRouter.swift */,
+				295B2C582AD52FAE0000BFF3 /* CarsListInteractor.swift */,
+				295B2C592AD52FAE0000BFF3 /* CarsListModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		2978CB422ACA8C4E00EEDD73 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +216,7 @@
 		2978CB852ACA939B00EEDD73 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				295B2C522AD52F800000BFF3 /* Cars */,
 				2978CB952ACA94E600EEDD73 /* Map */,
 			);
 			path = Modules;
@@ -282,6 +319,14 @@
 				2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */,
 			);
 			path = DecodableModel;
+			sourceTree = "<group>";
+		};
+		299AA8BE2AD67FE2008E5D3B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				299AA8BF2AD680AB008E5D3B /* CarCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,12 +464,17 @@
 				2978CB532ACA8C4E00EEDD73 /* ViewController.swift in Sources */,
 				2978CBB12ACAD44D00EEDD73 /* MapWorker.swift in Sources */,
 				2978CB8C2ACA93BF00EEDD73 /* MapViewController.swift in Sources */,
+				295B2C5A2AD52FAE0000BFF3 /* CarsListPresenter.swift in Sources */,
+				295B2C5D2AD52FAE0000BFF3 /* CarsListRouter.swift in Sources */,
 				2978CB9F2ACAA5B100EEDD73 /* NetworkManager.swift in Sources */,
 				2978CBA62ACAB26A00EEDD73 /* MapAPIConfig.swift in Sources */,
+				295B2C5C2AD52FAE0000BFF3 /* CarsListViewController.swift in Sources */,
 				2978CBAF2ACAD37400EEDD73 /* CarsListDecodableModel.swift in Sources */,
 				2978CB4F2ACA8C4E00EEDD73 /* AppDelegate.swift in Sources */,
 				2978CB9E2ACAA5B100EEDD73 /* RequestMethod.swift in Sources */,
+				295B2C5F2AD52FAE0000BFF3 /* CarsListModel.swift in Sources */,
 				2978CBA12ACAA5D500EEDD73 /* APIConfig.swift in Sources */,
+				299AA8C02AD680AB008E5D3B /* CarCell.swift in Sources */,
 				2978CBAC2ACABF2E00EEDD73 /* MapExtension.swift in Sources */,
 				2978CB8B2ACA93BF00EEDD73 /* MapPresenter.swift in Sources */,
 				2978CB8E2ACA93BF00EEDD73 /* MapModel.swift in Sources */,
@@ -432,6 +482,8 @@
 				2978CB592ACA8C4E00EEDD73 /* SIXTMap.xcdatamodeld in Sources */,
 				2978CB9D2ACAA5B100EEDD73 /* NetworkResponse.swift in Sources */,
 				2978CB512ACA8C4E00EEDD73 /* SceneDelegate.swift in Sources */,
+				295B2C5E2AD52FAE0000BFF3 /* CarsListInteractor.swift in Sources */,
+				295B2C5B2AD52FAE0000BFF3 /* CarsListWorker.swift in Sources */,
 				2978CB9C2ACAA5B100EEDD73 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

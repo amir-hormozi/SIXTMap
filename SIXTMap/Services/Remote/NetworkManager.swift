@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol NetworkManagerProtocol {
+    func performRequest<T: Decodable>(apiConfig: APIConfigProtocol) async throws -> T
+}
+
 struct NetworkManager {
     private func buildURLRequest(apiConfig: APIConfigProtocol) throws -> URLRequest {
         guard let baseURL = Bundle.main.object(forInfoDictionaryKey: "BaseUrl") as? String else { throw NetworkError.invalidURL }
@@ -34,7 +38,9 @@ struct NetworkManager {
         let decodedData = try decoder.decode(T.self, from: data)
         return decodedData
     }
-    
+}
+
+extension NetworkManager: NetworkManagerProtocol {
     func performRequest<T: Decodable>(apiConfig: APIConfigProtocol) async throws -> T {
         let request = try buildURLRequest(apiConfig: apiConfig)
         

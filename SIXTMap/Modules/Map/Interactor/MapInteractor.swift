@@ -36,7 +36,7 @@ extension MapInteractor: MapBusinessLogic {
                 await presenter?.setMapScale(locationDetail: presentationModel.first)
                 await presenter?.presentCarsList(crasList: presentationModel)
             } catch (let error) {
-                print(error)
+                presenter?.presentError(error: error.localizedDescription)
             }
         }
     }

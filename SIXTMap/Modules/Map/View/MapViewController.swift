@@ -11,6 +11,7 @@ import MapKit
 protocol MapDisplayLogic: AnyObject { 
     @MainActor func setMapScale(location: MapModel.CarListPresentationModel, distanceMeter: CLLocationDistance)
     @MainActor func addPins(pins: [MapModel.CarListPresentationModel])
+    func showError(errorMessage: String)
 }
 
 class MapViewController: UIViewController {
@@ -30,37 +31,14 @@ class MapViewController: UIViewController {
     }()
     
     // MARK: LifeCycle
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        setupVipStructure()
-        interactor.fetchCarsList()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        interactor.fetchCarsList()
         addView()
         setupConstraints()
     }
-
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
-    // MARK: Function
-    private func setupVipStructure() {
-        let viewController = self
-        let presenter = MapPresenter()
-        let router = MapRouter()
-        let worker = MapWorker()
-        let interactor = MapInteractor(worker: worker)
-        viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
-    }
-    
+    // MARK: Function    
     private func addView() {
         view.addSubview(mapView)
     }
@@ -76,6 +54,10 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MapDisplayLogic {
+    func showError(errorMessage: String) {
+        showAlert(withTitle: "Error", withMessage: errorMessage)
+    }
+    
     func setMapScale(location: MapModel.CarListPresentationModel, distanceMeter: CLLocationDistance) {
         let region = MKCoordinateRegion( center: .init(latitude: location.lat, longitude: location.long), latitudinalMeters: distanceMeter, longitudinalMeters: distanceMeter)
         mapView.setRegion(mapView.regionThatFits(region), animated: true)

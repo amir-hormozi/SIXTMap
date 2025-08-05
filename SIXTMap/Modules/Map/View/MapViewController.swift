@@ -52,7 +52,7 @@ class MapViewController: UIViewController {
         let viewController = self
         let presenter = MapPresenter()
         let router = MapRouter()
-        let worker = MapWorker()
+        let worker = MapWorker(networkManager: NetworkManager())
         let interactor = MapInteractor(worker: worker)
         viewController.interactor = interactor
         viewController.router = router

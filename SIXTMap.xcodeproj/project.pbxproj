@@ -32,6 +32,7 @@
 		2978CBAF2ACAD37400EEDD73 /* CarsListDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */; };
 		2978CBB12ACAD44D00EEDD73 /* MapWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */; };
 		B0216ACA2E42BA6C0071EB01 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0216AC92E42BA6C0071EB01 /* UIViewControllerExtension.swift */; };
+		B0216ACD2E42BCB40071EB01 /* MapConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0216ACC2E42BCB10071EB01 /* MapConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListDecodableModel.swift; sourceTree = "<group>"; };
 		2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWorker.swift; sourceTree = "<group>"; };
 		B0216AC92E42BA6C0071EB01 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		B0216ACC2E42BCB10071EB01 /* MapConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 		2978CB952ACA94E600EEDD73 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				B0216ACB2E42BCA30071EB01 /* Configurator */,
 				2978CBA42ACAB24A00EEDD73 /* Worker */,
 				2978CB942ACA94D500EEDD73 /* Model */,
 				2978CB932ACA94CF00EEDD73 /* Router */,
@@ -285,6 +288,14 @@
 				2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */,
 			);
 			path = DecodableModel;
+			sourceTree = "<group>";
+		};
+		B0216ACB2E42BCA30071EB01 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				B0216ACC2E42BCB10071EB01 /* MapConfigurator.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +434,7 @@
 				2978CBB12ACAD44D00EEDD73 /* MapWorker.swift in Sources */,
 				2978CB8C2ACA93BF00EEDD73 /* MapViewController.swift in Sources */,
 				2978CB9F2ACAA5B100EEDD73 /* NetworkManager.swift in Sources */,
+				B0216ACD2E42BCB40071EB01 /* MapConfigurator.swift in Sources */,
 				2978CBA62ACAB26A00EEDD73 /* MapAPIConfig.swift in Sources */,
 				2978CBAF2ACAD37400EEDD73 /* CarsListDecodableModel.swift in Sources */,
 				2978CB4F2ACA8C4E00EEDD73 /* AppDelegate.swift in Sources */,

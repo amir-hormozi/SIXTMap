@@ -31,37 +31,14 @@ class MapViewController: UIViewController {
     }()
     
     // MARK: LifeCycle
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        setupVipStructure()
-        interactor.fetchCarsList()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        interactor.fetchCarsList()
         addView()
         setupConstraints()
     }
-
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
-    // MARK: Function
-    private func setupVipStructure() {
-        let viewController = self
-        let presenter = MapPresenter()
-        let router = MapRouter()
-        let worker = MapWorker(networkManager: NetworkManager())
-        let interactor = MapInteractor(worker: worker)
-        viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
-    }
-    
+    // MARK: Function    
     private func addView() {
         view.addSubview(mapView)
     }

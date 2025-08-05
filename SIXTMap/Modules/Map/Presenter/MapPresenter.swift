@@ -7,6 +7,10 @@
 
 import CoreLocation
 
+fileprivate struct LocalConstants {
+    static let mapDistanceValue: Int = 8000
+}
+
 protocol MapPresentationLogic {
     func presentCarsList(crasList: [MapModel.CarListPresentationModel]) async
     func setMapScale(locationDetail: MapModel.CarListPresentationModel?) async
@@ -26,9 +30,8 @@ extension MapPresenter: MapPresentationLogic {
     }
     
     func setMapScale(locationDetail: MapModel.CarListPresentationModel?) async {
-        let distanceValue = 8000
         guard let locationDetail = locationDetail else { return }
-        guard let distanceMeter = CLLocationDistance(exactly: distanceValue) else { return }
+        guard let distanceMeter = CLLocationDistance(exactly: LocalConstants.mapDistanceValue) else { return }
 
         await viewController?.setMapScale(location: locationDetail, distanceMeter: distanceMeter)
     }

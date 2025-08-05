@@ -11,6 +11,7 @@ import MapKit
 protocol MapDisplayLogic: AnyObject { 
     @MainActor func setMapScale(location: MapModel.CarListPresentationModel, distanceMeter: CLLocationDistance)
     @MainActor func addPins(pins: [MapModel.CarListPresentationModel])
+    func showError(errorMessage: String)
 }
 
 class MapViewController: UIViewController {
@@ -76,6 +77,10 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MapDisplayLogic {
+    func showError(errorMessage: String) {
+        showAlert(withTitle: "Error", withMessage: errorMessage)
+    }
+    
     func setMapScale(location: MapModel.CarListPresentationModel, distanceMeter: CLLocationDistance) {
         let region = MKCoordinateRegion( center: .init(latitude: location.lat, longitude: location.long), latitudinalMeters: distanceMeter, longitudinalMeters: distanceMeter)
         mapView.setRegion(mapView.regionThatFits(region), animated: true)

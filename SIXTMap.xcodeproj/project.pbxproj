@@ -31,6 +31,7 @@
 		2978CBAC2ACABF2E00EEDD73 /* MapExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBAB2ACABF2E00EEDD73 /* MapExtension.swift */; };
 		2978CBAF2ACAD37400EEDD73 /* CarsListDecodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */; };
 		2978CBB12ACAD44D00EEDD73 /* MapWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */; };
+		B0216ACA2E42BA6C0071EB01 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0216AC92E42BA6C0071EB01 /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		2978CBAB2ACABF2E00EEDD73 /* MapExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExtension.swift; sourceTree = "<group>"; };
 		2978CBAE2ACAD37400EEDD73 /* CarsListDecodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListDecodableModel.swift; sourceTree = "<group>"; };
 		2978CBB02ACAD44D00EEDD73 /* MapWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWorker.swift; sourceTree = "<group>"; };
+		B0216AC92E42BA6C0071EB01 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 		2978CBAA2ACABF1300EEDD73 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B0216AC92E42BA6C0071EB01 /* UIViewControllerExtension.swift */,
 				2978CBAB2ACABF2E00EEDD73 /* MapExtension.swift */,
 			);
 			path = Extension;
@@ -431,6 +434,7 @@
 				2978CB8D2ACA93BF00EEDD73 /* MapRouter.swift in Sources */,
 				2978CB592ACA8C4E00EEDD73 /* SIXTMap.xcdatamodeld in Sources */,
 				2978CB9D2ACAA5B100EEDD73 /* NetworkResponse.swift in Sources */,
+				B0216ACA2E42BA6C0071EB01 /* UIViewControllerExtension.swift in Sources */,
 				2978CB512ACA8C4E00EEDD73 /* SceneDelegate.swift in Sources */,
 				2978CB9C2ACAA5B100EEDD73 /* NetworkError.swift in Sources */,
 			);
